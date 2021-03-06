@@ -1,7 +1,7 @@
 nsf:
   type: springboot2.1
   version: '2.0'
-  nsfServer: 'http://nsf-server.v190808.163skiff.com'
+  nsfServer: 'http://nsf-server-poc31.netease.com'
   application:
     name: stock-viewer
     version: 0.0.2
@@ -22,8 +22,8 @@ nsf:
       - '.*'
 
   authority:
-    accessKey: 081a63b82cb84dd481e689dbecbcba35
-    secretKey: 0a2f237e2ab44c84b50435db6164bdd4
+    accessKey: df3c701d6fa446378f83846c5aae1d41
+    secretKey: eacd46c06d6f4b89bc16523b51833929
   relations:
     services: []
     versions: []
