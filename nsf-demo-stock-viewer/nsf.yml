@@ -1,15 +1,11 @@
 nsf:
-  type: http
+  type: springboot2.1
   version: '2.0'
-  nsfServer: 'http://nsf-server-cust56.netease.com'
+  nsfServer: 'http://nsf-server-poc31.netease.com'
   application:
     name: stock-viewer
     version: 0.0.2
     projectCode: wangbicheng
-    envCode: prod
-    zone: default
-    group: default
-    tags: []
 
   # 方法配置
   manager:
@@ -26,5 +22,8 @@ nsf:
       - '.*'
 
   authority:
-    accessKey: ab681795638e4bb89c61119b649bf76e
-    secretKey: 22d111c19b5d4375846e7d66778a4a84
+    accessKey: df3c701d6fa446378f83846c5aae1d41
+    secretKey: eacd46c06d6f4b89bc16523b51833929
+  relations:
+    services: []
+    versions: []
