@@ -5,7 +5,7 @@ ADD ./nsf-demo-stock-provider/target/*.jar /opt/nsf/
 
 #add nsf agent jar and config file
 RUN mkdir -p /opt/nsf && cd /opt/nsf && \
-    wget "http://console-poc31.netease.com/download/nsf/nsf-agent-v2.6.8-c2a5e1f9-20201203-141827.jar" -O nsf-agent.jar
+    wget "http://console-poc31.netease.com/download/nsf/nsf-agent-dev-2.6-lhs-69543c56-20210308-160125.jar" -O nsf-agent.jar
 ADD ./nsf-demo-stock-provider/nsf.yml /opt/nsf/nsf.yml
 
 #add apm agent jar and config file
