@@ -54,14 +54,9 @@ public class StockServiceImpl implements IStockService {
 
         Stock stock = null;
         String finalUrl = stockProviderUrl + "/stocks/" + stockId;
+        String stocksStr = restTemplate.getForObject(finalUrl, String.class);
         
-        HttpHeaders headers = new HttpHeaders();
-        headers.set("stockCode", stockId);
-        HttpEntity<String> entity = new HttpEntity<String>("parameters", headers);
-        
-        ResponseEntity<String> respEntity = restTemplate.exchange(finalUrl, HttpMethod.GET, entity, String.class);
-        
-        stock = CastKit.str2Stock(respEntity.getBody());
+        stock = CastKit.str2Stock(stocksStr);
         log.info("get stock from {} by {} successful : {}", finalUrl, stockId, stock);
         return stock;
     }
