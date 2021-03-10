@@ -3,7 +3,7 @@ nsf:
   version: '2.0'
   nsfServer: 'http://nsf-server-poc31.netease.com'
   application:
-    name: stock-advisor
+    name: stock-advisor.solution-agent
     version: 0.0.1
     projectCode: wangbicheng
     envCode: prod
