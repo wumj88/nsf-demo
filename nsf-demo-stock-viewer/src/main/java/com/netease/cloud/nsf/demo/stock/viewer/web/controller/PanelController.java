@@ -11,6 +11,7 @@ import io.micrometer.core.instrument.MeterRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -177,5 +178,21 @@ public class PanelController {
             log.warn("get predict stock price failed ...");
         }
         return PredictPrice;
+    }
+
+    @Value("${a:hello}")
+    String a;
+
+    @GetMapping("/a")
+    public String TestApollo(){
+        return a;
+    }
+
+    @Value("${b::world}")
+    String b;
+
+    @GetMapping("/b")
+    public String TestApollo2(){
+        return b;
     }
 }
