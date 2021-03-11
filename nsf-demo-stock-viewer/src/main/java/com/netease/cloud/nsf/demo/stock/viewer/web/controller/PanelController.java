@@ -184,14 +184,16 @@ public class PanelController {
     String a;
 
     @GetMapping("/a")
-    public String TestApollo(){
+    @ResponseBody
+    public String TestApollo1(){
         return a;
     }
 
-    @Value("${b::world}")
+    @Value("${b:world}")
     String b;
 
     @GetMapping("/b")
+    @ResponseBody
     public String TestApollo2(){
         return b;
     }
