@@ -1,7 +1,7 @@
 nsf:
   type: http
   version: '2.0'
-  nsfServer: 'http://nsf-server-poc31.netease.com'
+  nsfServer: 'http://nsf-server-cust92.netease.com'
   application:
     name: stock-viewer
     version: 0.0.1
