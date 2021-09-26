@@ -7,7 +7,7 @@ nsf:
     version: 0.0.2
     projectCode: wangbicheng
     envCode: prod
-    zone: default
+    zone: chongqing
     group: default
     tags: []
 
