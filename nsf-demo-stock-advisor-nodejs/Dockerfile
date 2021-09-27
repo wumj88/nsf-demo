@@ -15,7 +15,7 @@ RUN npm install
 
 RUN npm install request@2.81.0
 
-COPY . .
+COPY ./nsf-demo-stock-advisor-nodejs .
 
 EXPOSE 9002
 CMD [ "node", "demo.js" ]
