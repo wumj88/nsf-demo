@@ -1,16 +1,16 @@
 nsf:
   type: http
   version: '2.0'
-  nsfServer: 'http://nsf-server-cust92.netease.com'
+  nsfServer: 'http://nsf-server.0430rc.service.163.org'
   application:
     name: stock-provider
     version: 0.0.2
-    projectCode: wangbicheng
+    projectCode: dbzq
     envCode: prod
     zone: default
     group: default
     tags: []
 
   authority:
-    accessKey: 33ada08bf75c49fb8842bf19e916911e
-    secretKey: 1ade96b5cf17455a9ec7a712ebfa70ac
+    accessKey: bc3e3dc710f240bfb72129a8ae4766ee
+    secretKey: e980baf191f443a0bf08ea37fdeaf8b9
