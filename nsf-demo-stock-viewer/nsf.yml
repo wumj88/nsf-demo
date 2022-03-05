@@ -1,12 +1,23 @@
 nsf:
-  type: springboot2.1
+  type: http
   version: '2.0'
-  nsfServer: 'http://nsf-server-poc31.netease.com'
+  nsfServer: 'http://nsf-server-cust92-env2.netease.com'
   application:
-    name: stock-viewer
-    version: 0.0.2
-    projectCode: wangbicheng
-
+    name: nsf-stock-viewer
+    version: v0.0.1
+    projectCode: wenyu-default
+    envCode: prod2
+    zone: jd
+    group: nsf-demo
+    tags: []
+  
+  authority:
+    accessKey: 1d1af3f1bda64ef78971e678e6fb241a
+    secretKey: 819846e4ab8a4e1db9b127fb14178d81
+   relations:
+    services: []
+    versions: []
+    
   # 方法配置
   manager:
     patterns:
@@ -20,10 +31,3 @@ nsf:
       includes:
       - 'jvm.*'
       - '.*'
-
-  authority:
-    accessKey: df3c701d6fa446378f83846c5aae1d41
-    secretKey: eacd46c06d6f4b89bc16523b51833929
-  relations:
-    services: []
-    versions: []
