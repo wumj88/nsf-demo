@@ -1,13 +1,13 @@
 FROM tomcat:7.0.77-jre8
 
 #add application jar
-ADD target/*.jar /opt/nsf/
+ADD nsf-demo-stock-viewer/target/*.jar /opt/nsf/
 
 #add nsf agent jar and config file
 RUN mkdir -p /opt/nsf && \
     wget -q "http://console-cust92.netease.com/download/nsf/nsf-agent-v2.6.8-c2a5e1f9-20201203-141827.jar" -O /opt/nsf/nsf-agent.jar
 	
-ADD nsf.yml /opt/nsf/nsf.yml
+ADD nsf-demo-stock-viewer/nsf.yml /opt/nsf/nsf.yml
 
 #add apm agent jar and config file
 RUN mkdir -p /opt/apm && \
@@ -24,7 +24,7 @@ RUN mkdir -p /opt/apm && \
 	echo 'agent.sample_n_per_3_secs=10000' >> agent.config
 
 #add run command
-ADD run.sh  /opt/nsf/
+ADD nsf-demo-stock-viewer/run.sh  /opt/nsf/
 RUN chmod a+x /opt/nsf/run.sh
 
 CMD ["/opt/nsf/run.sh"]
