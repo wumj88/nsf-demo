@@ -14,7 +14,7 @@ nsf:
   authority:
     accessKey: 1d1af3f1bda64ef78971e678e6fb241a
     secretKey: 819846e4ab8a4e1db9b127fb14178d81
-   relations:
+  relations:
     services: []
     versions: []
     
