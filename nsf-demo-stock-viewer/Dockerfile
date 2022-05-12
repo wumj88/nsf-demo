@@ -16,14 +16,13 @@ RUN mkdir -p /opt/apm && \
     tar zxvf skywalking-napm-bin-8.5.0-latest.tar.gz && \
     cd ./skywalking-napm-bin-8.5.0-latest/agent/config && \
     # productId用于表示APM中唯一的应用，名称不可修改
-	echo 'agent.authentication=NTczLXd5ZGVtbw==dw-nsf-http-stock-viewer' >> agent.config && \
-	# service 为APM中监控服务的名称（进程功能，如管理服务器），小写字母、数字、英文句号或中划线组成，以字母开头，字母或数字结尾
-    # 建议和监控的服务进程名相同，如 webServer、alertServer
-	echo 'agent.service_name=dw-nsf-http-stock-viewer' >> agent.config && \
-	# 注册服务和数据上传地址
-	echo 'collector.backend_service=apm-otel-collector.service.163.org:11800' >> agent.config && \
-	# 3秒内采集trace上限，默认10000条 （-1代表全部采集）
-	echo 'agent.sample_n_per_3_secs=10000' >> agent.config
+    echo 'agent.authentication=NTczLXd5ZGVtbw==dw-nsf-http-stock-viewer' >> agent.config && \
+    # service 为APM中监控服务的名称
+    echo 'agent.service_name=dw-nsf-http-stock-viewer' >> agent.config && \
+    # 注册服务和数据上传地址
+    echo 'collector.backend_service=apm-otel-collector.service.163.org:11800' >> agent.config && \
+    # 3秒内采集trace上限，默认10000条 （-1代表全部采集）
+    echo 'agent.sample_n_per_3_secs=10000' >> agent.config
 
 #add run command
 ADD nsf-demo-stock-viewer/run.sh  /opt/nsf/
