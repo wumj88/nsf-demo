@@ -1,28 +1,25 @@
 nsf:
   type: http
   version: '2.0'
-  nsfServer: 'http://nsf-server-cust92-env2.netease.com'
+  nsfServer: 'http://nsf-server.service.163.org'
   application:
-    name: nsf-stock-viewer
-    version: v0.0.1
-    projectCode: wenyu-default
-    envCode: prod2
-    zone: jd
-    group: nsf-demo
-    tags: []
-  
+    name: dw-nsf-http-stock-viewer
+    version: v1.0.0
+    projectCode: common
+    envCode: prod
+    zone: az1
+    group: default
+    tags:
+      -
+        key: protocol
+        value: http
   authority:
-    accessKey: 1d1af3f1bda64ef78971e678e6fb241a
-    secretKey: 819846e4ab8a4e1db9b127fb14178d81
-  relations:
-    services: []
-    versions: []
-    
-  # 方法配置
+    accessKey: 4f24e24114b44792b777cf5220024408
+    secretKey: 10253ba5221a4abaa5927c078cd5eaab
   manager:
     patterns:
-    - className: com.netease.cloud.nsf.demo.stock.viewer.web.service.impl.*
-
+      -
+        className: 'com.netease.cloud.nsf.demo.stock.viewer.web.service.impl.*'
   # 应用监控
   metric:
     enable: true
