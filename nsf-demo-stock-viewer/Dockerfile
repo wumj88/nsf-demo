@@ -16,7 +16,7 @@ RUN mkdir -p /opt/apm && \
     tar zxvf skywalking-napm-bin-8.5.0-latest.tar.gz && \
     cd ./skywalking-napm-bin-8.5.0-latest/agent/config && \
     # productId用于表示APM中唯一的应用，名称不可修改
-    echo 'agent.authentication=NTczLXd5ZGVtbw==dw-nsf-http-stock-viewer' >> agent.config && \
+    echo 'agent.authentication=NTczLWR3ZGVtbw==' > agent.config && \
     # service 为APM中监控服务的名称
     echo 'agent.service_name=dw-nsf-http-stock-viewer' >> agent.config && \
     # 注册服务和数据上传地址
@@ -29,4 +29,3 @@ ADD nsf-demo-stock-viewer/run.sh  /opt/nsf/
 RUN chmod a+x /opt/nsf/run.sh
 
 CMD ["/opt/nsf/run.sh"]
-
