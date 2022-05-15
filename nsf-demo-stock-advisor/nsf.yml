@@ -1,16 +1,30 @@
 nsf:
-  type: springboot2.1
+  type: http
   version: '2.0'
-  nsfServer: 'http://nsf-server.v190808.163skiff.com'
+  nsfServer: 'http://nsf-server.service.163.org'
   application:
-    name: stock-advisor
-    version: 0.0.2
-    projectCode: wangbicheng
+    name: dw-nsf-http-stock-advisor
+    version: v1.0.0
+    projectCode: common
+    envCode: prod
+    zone: az1
+    group: default
+    tags:
+      -
+        key: protocol
+        value: http
   authority:
-    accessKey: 081a63b82cb84dd481e689dbecbcba35
-    secretKey: 0a2f237e2ab44c84b50435db6164bdd4
+    accessKey: 4f24e24114b44792b777cf5220024408
+    secretKey: 10253ba5221a4abaa5927c078cd5eaab
   manager:
-    patterns: []
-  relations:
-    services: []
-    versions: []
+    patterns:
+      -
+        className: 'com.netease.cloud.nsf.demo.stock.advisor.web.service.impl.*'
+  # 应用监控
+  metric:
+    enable: true
+    custom:
+      enable: true
+      includes:
+      - 'jvm.*'
+      - '.*'
