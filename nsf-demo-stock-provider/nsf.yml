@@ -20,6 +20,7 @@ nsf:
     patterns:
       -
         className: 'com.netease.cloud.nsf.demo.stock.provider.web.service.impl.*'
+        
   # 应用监控
   metric:
     enable: true
