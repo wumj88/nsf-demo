@@ -10,16 +10,17 @@ nsf:
     zone: az1
     group: default
     tags:
-      -
-        key: protocol
+      - key: protocol
         value: http
+      - key: version
+        value: v1
+
   authority:
     accessKey: 4f24e24114b44792b777cf5220024408
     secretKey: 10253ba5221a4abaa5927c078cd5eaab
   manager:
     patterns:
-      -
-        className: 'com.netease.cloud.nsf.demo.stock.provider.web.service.impl.*'
+      - className: 'com.netease.cloud.nsf.demo.stock.provider.web.service.impl.*'
         
   # 应用监控
   metric:
@@ -27,5 +28,5 @@ nsf:
     custom:
       enable: true
       includes:
-      - 'jvm.*'
-      - '.*'  
+        - 'jvm.*'
+        - '.*'  
