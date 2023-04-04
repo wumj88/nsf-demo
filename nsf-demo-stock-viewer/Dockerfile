@@ -10,19 +10,19 @@ ADD nsf-demo-stock-viewer/target/*.jar /opt/nsf/
 ADD nsf-demo-stock-viewer/nsf.yml /opt/nsf/nsf.yml
 
 #add apm agent jar and config file
-#RUN mkdir -p /opt/apm && \
-#    cd /opt/apm/ && \
-#    wget -q http://console-cust145.qingzhou.netease.com/download/napm/skywalking-napm-bin-8.5.0-latest.tar.gz -O skywalking-napm-bin-8.5.0-latest.tar.gz && \
-#    tar zxvf skywalking-napm-bin-8.5.0-latest.tar.gz && \
-#    cd ./skywalking-napm-bin-8.5.0-latest/agent/config && \
-#    # productId用于表示APM中唯一的应用，名称不可修改
-#    echo 'agent.authentication=NTczLWR3ZGVtbw==' > agent.config && \
-#    # service 为APM中监控服务的名称
-#    echo 'agent.service_name=dw-nsf-http-stock-viewer' >> agent.config && \
-#    # 注册服务和数据上传地址
-#    echo 'collector.backend_service=apm-otel-collector.service.163.org:11800' >> agent.config && \
-#    # 3秒内采集trace上限，默认10000条 （-1代表全部采集）
-#    echo 'agent.sample_n_per_3_secs=10000' >> agent.config
+RUN mkdir -p /opt/apm && \
+    cd /opt/apm/ && \
+    wget -q http://console-cust145.qingzhou.netease.com/download/napm/skywalking-napm-bin-8.8.0-latest.tar.gz -O skywalking-napm-bin-8.8.0-latest.tar.gz && \
+    tar zxvf skywalking-napm-bin-8.8.0-latest.tar.gz && \
+    cd ./skywalking-napm-bin-8.8.0-latest/agent/config && \
+    # productId用于表示APM中唯一的应用，名称不可修改
+    echo 'agent.authentication=NTczLWR3ZGVtbw==' > agent.config && \
+    # service 为APM中监控服务的名称
+    echo 'agent.service_name=dw-nsf-viewer' >> agent.config && \
+    # 注册服务和数据上传地址
+    echo 'collector.backend_service=apm-otel-collector.service.163.org:11800' >> agent.config && \
+    # 3秒内采集trace上限，默认10000条 （-1代表全部采集）
+    echo 'agent.sample_n_per_3_secs=10000' >> agent.config
 
 #add run command
 ADD nsf-demo-stock-viewer/run2.sh  /opt/nsf/
