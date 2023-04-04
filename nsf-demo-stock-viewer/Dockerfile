@@ -7,7 +7,7 @@ ADD nsf-demo-stock-viewer/target/*.jar /opt/nsf/
 #RUN mkdir -p /opt/nsf && \
 #    wget -q http://console-cust145.qingzhou.netease.com/download/nsf/nsf-boot.jar -O /opt/nsf/nsf-agent.jar
 	
-ADD nsf-demo-stock-viewer/nsf.yml /opt/nsf/nsf.yml
+# ADD nsf-demo-stock-viewer/nsf.yml /opt/nsf/nsf.yml
 
 #add apm agent jar and config file
 RUN mkdir -p /opt/apm && \
