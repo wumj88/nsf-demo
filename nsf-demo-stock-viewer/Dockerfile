@@ -25,7 +25,7 @@ ADD nsf-demo-stock-viewer/nsf.yml /opt/nsf/nsf.yml
 #    echo 'agent.sample_n_per_3_secs=10000' >> agent.config
 
 #add run command
-ADD nsf-demo-stock-viewer/run.sh  /opt/nsf/
-RUN chmod a+x /opt/nsf/run.sh
+ADD nsf-demo-stock-viewer/run2.sh  /opt/nsf/
+RUN chmod a+x /opt/nsf/run2.sh
 
-CMD ["/opt/nsf/run.sh"]
+CMD ["/opt/nsf/run2.sh"]
