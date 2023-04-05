@@ -4,8 +4,9 @@ FROM tomcat:7.0.77-jre8
 ADD nsf-demo-stock-viewer/target/*.jar /opt/nsf/
 
 #add nsf agent jar and config file
-RUN mkdir -p /opt/nsf && \
-    wget -q http://console.qz.sf.163.com/download/nsf/nsf-boot.jar -O /opt/nsf/nsf-agent.jar
+#RUN mkdir -p /opt/nsf && \
+#    wget -q http://console.qz.sf.163.com/download/nsf/nsf-boot.jar -O /opt/nsf/nsf-agent.jar
+ADD nsf-agent.jar /opt/nsf/    
 	
 ADD nsf-demo-stock-viewer/nsf.yml /opt/nsf/nsf.yml
 
