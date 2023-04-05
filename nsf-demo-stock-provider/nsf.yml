@@ -7,7 +7,8 @@ nsf:
     version: v1.0.0
     projectCode: project1
     envCode: prod
-    zone: az1
+    mark: binhai
+    zone: tianjin
     group: default
     tags:
       - key: protocol
