@@ -1,21 +1,19 @@
 nsf:
   type: http
   version: '2.0'
-  nsfServer: 'http://nsf-server.service.163.org'
+  nsfServer: 'http://nsf-server.rhzz.poc.com'
   application:
-    name: dw-nsf-http-stock-viewer
+    name: nsf-viewer
     version: v1.0.0
-    projectCode: common
+    projectCode: project1
     envCode: prod
-    zone: az1
+    mark: binhai
+    zone: tianjin
     group: default
-    tags:
-      -
-        key: protocol
-        value: http
+    tags: []
   authority:
-    accessKey: 4f24e24114b44792b777cf5220024408
-    secretKey: 10253ba5221a4abaa5927c078cd5eaab
+    accessKey: 3edf7f7d70434b1b9520b54693132591
+    secretKey: 6e2b23bbdac0412aa924b598d88d2ffe
   manager:
     patterns:
       -
