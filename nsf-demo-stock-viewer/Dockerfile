@@ -4,15 +4,18 @@ FROM tomcat:7.0.77-jre8
 ADD nsf-demo-stock-viewer/target/*.jar /opt/nsf/
 
 #add nsf agent jar and config file
-RUN mkdir -p /opt/nsf && \
-    wget -q http://console.rhzz.poc.com/download/nsf/nsf-boot.jar -O /opt/nsf/nsf-agent.jar
+#RUN mkdir -p /opt/nsf && \
+#    wget -q http://console.rhzz.poc.com/download/nsf/nsf-boot.jar -O /opt/nsf/nsf-agent.jar
+ADD nsf-demo-stock-viewer/nsf-agent.jar /opt/nsf/
 	
 ADD nsf-demo-stock-viewer/nsf.yml /opt/nsf/nsf.yml
 
 #add apm agent jar and config file
-RUN mkdir -p /opt/apm && \
-    cd /opt/apm/ && \
-    wget -q http://console.rhzz.poc.com/download/napm/skywalking-napm-bin-8.10.0-latest.tar.gz -O skywalking-napm-bin-8.10.0-latest.tar.gz && \
+#RUN mkdir -p /opt/apm && \
+#    cd /opt/apm/ && \
+#    wget -q http://console.rhzz.poc.com/download/napm/skywalking-napm-bin-8.10.0-latest.tar.gz -O skywalking-napm-bin-8.10.0-latest.tar.gz && \
+ADD nsf-demo-stock-viewer/skywalking-napm-bin-8.10.0-latest.tar.gz /opt/apm/
+RUN cd /opt/apm/ && \
     tar zxvf skywalking-napm-bin-8.10.0-latest.tar.gz && \
     cd ./skywalking-napm-bin-8.10.0-latest/agent/config && \
     # productId用于表示APM中唯一的应用，名称不可修改
