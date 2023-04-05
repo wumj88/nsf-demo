@@ -3,7 +3,7 @@ nsf:
   version: '2.0'
   nsfServer: 'http://nsf-server.service.163.org'
   application:
-    name: dw-nsf-http-stock-provider
+    name: nsf-provider
     version: v1.0.0
     projectCode: common
     envCode: prod
