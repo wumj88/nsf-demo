@@ -13,7 +13,7 @@ ADD nsf-demo-stock-viewer/nsf.yml /opt/nsf/nsf.yml
 #add apm agent jar and config file
 RUN mkdir -p /opt/apm && \
     cd /opt/apm/ && \
-    wget -q http://console.service.163.org/download/napm/skywalking-napm-bin-8.10.0-latest.tar.gz -O skywalking-napm-bin-8.10.0-latest.tar.gz && \
+    wget -q http://console.qz.sf.163.com/download/napm/skywalking-napm-bin-8.10.0-latest.tar.gz -O skywalking-napm-bin-8.10.0-latest.tar.gz && \
     tar zxvf skywalking-napm-bin-8.10.0-latest.tar.gz && \
     cd ./skywalking-napm-bin-8.10.0-latest/agent/config && \
     # productId用于表示APM中唯一的应用，名称不可修改
