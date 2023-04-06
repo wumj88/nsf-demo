@@ -7,7 +7,7 @@ nsf:
     version: v1.0.0
     projectCode: project1
     envCode: prod
-    mark: binhai
+    mark: ""
     zone: tianjin
     group: default
     tags: []
