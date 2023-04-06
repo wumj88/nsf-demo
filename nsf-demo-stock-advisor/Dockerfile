@@ -19,7 +19,7 @@ RUN mkdir -p /opt/apm && \
     # productId用于表示APM中唯一的应用，名称不可修改
     echo 'agent.authentication=My1kZW1v' > agent.config && \
     # service 为APM中监控服务的名称
-    echo 'agent.service_name=nsf-advisor' >> agent.config && \
+    echo 'agent.service_name=nsm-advisor' >> agent.config && \
     # 注册服务和数据上传地址
     echo 'collector.backend_service=apm-otel-collector.rhzz.poc.com:11800' >> agent.config && \
     # 3秒内采集trace上限，默认10000条 （-1代表全部采集）
