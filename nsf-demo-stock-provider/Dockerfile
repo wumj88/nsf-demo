@@ -4,16 +4,16 @@ FROM tomcat:7.0.77-jre8
 ADD nsf-demo-stock-provider/target/*.jar /opt/nsf/
 
 #add nsf agent jar and config file
-#RUN mkdir -p /opt/nsf && \
-#    wget -q http://console.service.163.org/download/nsf/nsf-boot.jar -O /opt/nsf/nsf-agent.jar
-ADD nsf-agent.jar /opt/nsf/
+RUN mkdir -p /opt/nsf && \
+    wget -q http://console.rhzz.poc.com/download/nsf/nsf-boot.jar -O /opt/nsf/nsf-agent.jar
+#ADD nsf-agent.jar /opt/nsf/
 	
 ADD nsf-demo-stock-provider/nsf.yml /opt/nsf/
 
 #add apm agent jar and config file
 RUN mkdir -p /opt/apm && \
     cd /opt/apm/ && \
-    wget -q http://console.qz.sf.163.com/download/napm/skywalking-napm-bin-8.10.0-latest.tar.gz -O skywalking-napm-bin-8.10.0-latest.tar.gz && \
+    wget -q http://console.rhzz.poc.com/download/napm/skywalking-napm-bin-8.10.0-latest.tar.gz -O skywalking-napm-bin-8.10.0-latest.tar.gz && \
     tar zxvf skywalking-napm-bin-8.10.0-latest.tar.gz && \
     cd ./skywalking-napm-bin-8.10.0-latest/agent/config && \
     # productId用于表示APM中唯一的应用，名称不可修改
