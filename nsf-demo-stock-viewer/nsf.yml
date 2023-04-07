@@ -17,7 +17,7 @@ nsf:
   manager:
     patterns:
       -
-        className: com.netease.cloud.nsf.demo.stock.viewer.web
+        className: 'com.netease.cloud.nsf.demo.stock.viewer.web.*'
   # 应用监控
   metric:
     enable: true
