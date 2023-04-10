@@ -18,11 +18,3 @@ nsf:
     patterns:
       -
         className: 'com.netease.cloud.consumer.service.*'
-  # 应用监控
-  metric:
-    enable: true
-    custom:
-      enable: true
-      includes:
-      - 'jvm.*'
-      - '.*'
