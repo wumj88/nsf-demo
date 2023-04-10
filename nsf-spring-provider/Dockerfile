@@ -26,7 +26,7 @@ RUN mkdir -p /opt/apm && \
     echo 'agent.sample_n_per_3_secs=10000' >> agent.config
 
 #add run command
-ADD nsf-demo-stock-viewer/run.sh  /opt/nsf/
+ADD nsf-spring-provider/run.sh  /opt/nsf/
 RUN chmod a+x /opt/nsf/run.sh
 
 CMD ["/opt/nsf/run.sh"]
