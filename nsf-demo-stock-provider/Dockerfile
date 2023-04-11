@@ -8,7 +8,7 @@ ADD nsf-demo-stock-provider/target/*.jar /opt/nsf/
 #    wget -q http://console.rhzz.poc.com/download/nsf/nsf-boot.jar -O /opt/nsf/nsf-agent.jar
 #ADD nsf-agent.jar /opt/nsf/
 	
-#ADD nsf-demo-stock-provider/nsf.yml /opt/nsf/
+ADD nsf-demo-stock-provider/nsf.yml /opt/nsf/
 
 #add apm agent jar and config file
 RUN mkdir -p /opt/apm && \
