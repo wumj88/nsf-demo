@@ -4,11 +4,11 @@ nsf:
   nsfServer: 'http://nsf-server.rhzz.poc.com'
   application:
     name: nsf-provider
-    version: v1.0.0
+    version: v2.0.0
     projectCode: project1
     envCode: prod
     mark: ""
-    zone: tianjin
+    zone: az1
     group: default
     tags: []
 
