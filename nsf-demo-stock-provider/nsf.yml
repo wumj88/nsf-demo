@@ -1,30 +1,15 @@
 nsf:
   type: http
-  version: '2.0'
-  nsfServer: 'http://nsf-server.rhzz.poc.com'
+  nsfServer: 'http://nsf-server.qz.sf.163.com'
   application:
     name: nsf-provider
     version: v2.0.0
-    projectCode: project1
+    projectCode: poc
     envCode: prod
     mark: ""
-    zone: az1
     group: default
     tags: []
-
-  authority:
-    accessKey: 3edf7f7d70434b1b9520b54693132591
-    secretKey: 6e2b23bbdac0412aa924b598d88d2ffe
   manager:
     patterns: 
       - 
-        className: 'com.netease.cloud.nsf.demo.stock.provider.web.*'
-        
-  # 应用监控
-  metric:
-    enable: true
-    custom:
-      enable: true
-      includes:
-        - 'jvm.*'
-        - '.*'  
+        className: 'com.netease.cloud.nsf.demo.stock.provider.web.controller.*'
