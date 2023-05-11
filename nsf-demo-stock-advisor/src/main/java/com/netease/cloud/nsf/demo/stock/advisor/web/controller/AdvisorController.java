@@ -34,7 +34,7 @@ public class AdvisorController {
 	@Value("${spring.application.name}")
 	String name;
 
-	@Value("${nsf.application.version}")
+	@Value("${nsf.application.version:v0.0.1}")
 	String version;
 
 	@GetMapping("/echo")
