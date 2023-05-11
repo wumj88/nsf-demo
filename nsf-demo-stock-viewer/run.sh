@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=44123 -javaagent:/opt/nsf/nsf-agent.jar=nsf -Dstock_provider_url=http://nsf-provider -Dstock_advisor_url=http://nsf-advisor -javaagent:/opt/apm/skywalking-napm-bin-8.10.0-latest/agent/skywalking-agent.jar -Dskywalking_config=/opt/apm/skywalking-napm-bin-8.10.0-latest/agent/config/agent.config -jar /opt/nsf/nsf-demo-stock-viewer-1.0-SNAPSHOT.jar
+java -Dstock_provider_url=http://sm-provider -Dstock_advisor_url=http://sm-advisor -javaagent:/opt/apm/skywalking-napm-bin-8.10.0-latest/agent/skywalking-agent.jar -Dskywalking_config=/opt/apm/skywalking-napm-bin-8.10.0-latest/agent/config/agent.config -jar /opt/nsf/nsf-demo-stock-viewer-1.0-SNAPSHOT.jar
