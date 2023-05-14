@@ -3,7 +3,7 @@ nsf:
   nsfServer: 'http://nsf-server.qz.sf.163.com'
   application:
     name: nsf-provider
-    version: v2.0.0
+    version: v3.0.0
     projectCode: poc
     envCode: prod
     mark: red
