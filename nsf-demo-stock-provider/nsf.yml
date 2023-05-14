@@ -6,7 +6,7 @@ nsf:
     version: v2.0.0
     projectCode: poc
     envCode: prod
-    mark: ""
+    mark: red
     group: default
     tags: []
   manager:
