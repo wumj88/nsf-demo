@@ -1,32 +1,28 @@
-FROM tomcat:7.0.77-jre8
+FROM openjdk:8
 
+ENV TZ=Asia/Shanghai LANG=C.UTF-8 LANGUAGE=C.UTF-8 LC_ALL=C.UTF-8
+
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 #add application jar
-ADD nsf-demo-stock-advisor/target/*.jar /opt/nsf/
+ADD ./nsf-demo-stock-advisor/target/*.jar /opt/nsf/
 
 #add nsf agent jar and config file
-RUN mkdir -p /opt/nsf && \
-    wget -q http://console.rhzz.poc.com/download/nsf/nsf-boot.jar -O /opt/nsf/nsf-agent.jar
-#ADD nsf-agent.jar /opt/nsf/
-	
-ADD nsf-demo-stock-advisor/nsf.yml /opt/nsf/
+RUN mkdir -p /opt/nsf && cd /opt/nsf && \
+    wget "http://console.qz.sf.163.com/download/nsf/nsf-boot.jar" -O nsf-agent.jar
+ADD ./nsf-demo-stock-advisor/nsf.yml /opt/nsf/nsf.yml
 
 #add apm agent jar and config file
-RUN mkdir -p /opt/apm && \
-    cd /opt/apm/ && \
-    wget -q http://console.rhzz.poc.com/download/napm/skywalking-napm-bin-8.10.0-latest.tar.gz -O skywalking-napm-bin-8.10.0-latest.tar.gz && \
+RUN mkdir -p /opt/apm && cd /opt/apm && \
+    wget "http://console.qz.sf.163.com/download/napm/skywalking-napm-bin-8.10.0-latest.tar.gz" -O skywalking-napm-bin-8.10.0-latest.tar.gz && \
     tar zxvf skywalking-napm-bin-8.10.0-latest.tar.gz && \
     cd ./skywalking-napm-bin-8.10.0-latest/agent/config && \
-    # productId用于表示APM中唯一的应用，名称不可修改
-    echo 'agent.authentication=My1kZW1v' > agent.config && \
-    # service 为APM中监控服务的名称
-    echo 'agent.service_name=nsf-advisor' >> agent.config && \
-    # 注册服务和数据上传地址
-    echo 'collector.backend_service=apm-otel-collector.rhzz.poc.com:11800' >> agent.config && \
-    # 3秒内采集trace上限，默认10000条 （-1代表全部采集）
-    echo 'agent.sample_n_per_3_secs=10000' >> agent.config
+    echo "collector.backend_service=apm-otel-collector.qz.sf.163.com:11800" >> agent.config && \
+    echo "agent.authentication=MTgtc29sdXRpb24=" >> agent.config && \
+    echo "agent.service_name=nsf-advisor" >> agent.config
+
 
 #add run command
-ADD nsf-demo-stock-advisor/run.sh  /opt/nsf/
+ADD ./nsf-demo-stock-advisor/run.sh  /opt/nsf/
 RUN chmod a+x /opt/nsf/run.sh
 
 CMD ["/opt/nsf/run.sh"]
