@@ -12,7 +12,6 @@ RUN mkdir -p /opt/nsf && cd /opt/nsf && \
 ADD ./nsf-demo-stock-provider/nsf.yml /opt/nsf/nsf.yml
 
 #add apm agent jar and config file
-#add apm agent jar and config file
 RUN mkdir -p /opt/apm && cd /opt/apm && \
     wget "http://console.qz.sf.163.com/download/napm/skywalking-napm-bin-8.10.0-latest.tar.gz" -O skywalking-napm-bin-8.10.0-latest.tar.gz && \
     tar zxvf skywalking-napm-bin-8.10.0-latest.tar.gz && \
