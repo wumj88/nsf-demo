@@ -1,4 +1,4 @@
-FROM openjdk:8
+FROM harbor.cloud.netease.com/qzprod/jdk8-openjdk-skiff:v1.6-221101-multi
 
 ENV TZ=Asia/Shanghai LANG=C.UTF-8 LANGUAGE=C.UTF-8 LC_ALL=C.UTF-8
 
