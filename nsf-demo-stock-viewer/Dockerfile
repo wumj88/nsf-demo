@@ -1,4 +1,6 @@
-FROM openjdk:8
+ARG BASE_IMAGE=artifactory.jfyl.upgrade.test.com/library/nginx:1.22.1
+
+FROM ${BASE_IMAGE}
 
 ENV TZ=Asia/Shanghai LANG=C.UTF-8 LANGUAGE=C.UTF-8 LC_ALL=C.UTF-8
 
