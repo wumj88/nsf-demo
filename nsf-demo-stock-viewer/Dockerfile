@@ -12,7 +12,7 @@ ADD ./nsf-demo-stock-viewer/target/*.jar /opt/nsf/
 
 #add nsf agent jar and config file
 RUN mkdir -p /opt/nsf && cd /opt/nsf && \
-    wget http://console.jfyl.upgrade.test.com/download/nsf/nsf-agent-fat.jar
+    curl -O http://console.jfyl.upgrade.test.com/download/nsf/nsf-agent-fat.jar
 ADD ./nsf-demo-stock-viewer/nsf.yml /opt/nsf/nsf.yml
 
 #add apm agent jar and config file

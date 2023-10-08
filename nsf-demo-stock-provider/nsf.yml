@@ -1,10 +1,10 @@
 nsf:
   type: http
-  nsfServer: 'http://nsf-server.qz.sf.163.com'
+  nsfServer: 'http://nsf-server.jfyl.upgrade.test.com'
   application:
     name: nsf-provider
-    version: v3.0.0
-    projectCode: poc
+    version: v0.0.1
+    projectCode: project1
     envCode: prod
     mark: ""
     group: default
