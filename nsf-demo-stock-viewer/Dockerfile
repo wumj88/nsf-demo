@@ -7,12 +7,12 @@ ENV TZ=Asia/Shanghai LANG=C.UTF-8 LANGUAGE=C.UTF-8 LC_ALL=C.UTF-8
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 #add application jar
-ADD ./target/*.jar /opt/nsf/
+ADD ./nsf-demo-stock-viewer/target/*.jar /opt/nsf/
 
 #add nsf agent jar and config file
 RUN mkdir -p /opt/nsf && cd /opt/nsf && \
     curl -O http://console.jfyl.upgrade.test.com/download/nsf/nsf-agent-fat.jar
-ADD ./nsf.yml /opt/nsf/nsf.yml
+ADD ./nsf-demo-stock-viewer/nsf.yml /opt/nsf/nsf.yml
 
 
 
