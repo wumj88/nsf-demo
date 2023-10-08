@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=artifactory.jfyl.upgrade.test.com/library/nginx:1.22.1
+ARG BASE_IMAGE=artifactory.jfyl.upgrade.test.com/library/cicd-mvn3.5-jdk8:v2.1.1
 
 FROM ${BASE_IMAGE}
 
@@ -30,3 +30,4 @@ ADD ./nsf-demo-stock-viewer/run.sh  /opt/nsf/
 RUN chmod a+x /opt/nsf/run.sh
 
 CMD ["java -javaagent:/opt/nsf/nsf-agent-fat.jar=nsf -Dnsf.grpc.timeout=15000 -Dstock_provider_url=http://nsf-provider -Dstock_advisor_url=http://nsf-advisor -jar /opt/nsf/nsf-demo-stock-viewer-1.0-SNAPSHOT.jar"]
+nsf-demo-stock-viewer-1.0-SNAPSHOT.jar
