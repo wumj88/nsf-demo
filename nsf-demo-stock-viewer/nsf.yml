@@ -1,13 +1,12 @@
 nsf:
   type: http
-  nsfServer: 'http://nsf-server.qz.sf.163.com'
+  nsfServer: 'http://nsf-server.jfyl.upgrade.test.com'
   application:
     name: nsf-viewer
-    version: v1.0.0
-    projectCode: poc
-    envCode: prod
+    version: 0.0.1
+    projectCode: project1
+    projectEnv: prod
     mark: ""
-    group: default
     tags: []
   manager:
     patterns:
