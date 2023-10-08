@@ -28,4 +28,4 @@ ADD ./nsf-demo-stock-provider/nsf.yml /opt/nsf/nsf.yml
 ADD ./nsf-demo-stock-provider/run.sh  /opt/nsf/
 RUN chmod a+x /opt/nsf/run.sh
 
-CMD ["java -javaagent:/opt/nsf/nsf-agent-fat.jar=nsf -Dnsf.grpc.timeout=15000  -jar /opt/nsf/nsf-demo-stock-provider-1.0-SNAPSHOT.jar"]
+CMD ["/opt/nsf/run.sh"]
