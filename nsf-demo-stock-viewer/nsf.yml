@@ -5,7 +5,7 @@ nsf:
     name: nsf-viewer
     version: 0.0.1
     projectCode: project1
-    projectEnv: prod
+    envCode: prod
     mark: ""
     tags: []
   manager:
