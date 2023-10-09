@@ -25,7 +25,7 @@ ADD ./nsf-demo-stock-viewer/nsf.yml /opt/nsf/nsf.yml
 #    echo "agent.authentication=MTgtc29sdXRpb24=" >> agent.config && \
 #    echo "agent.service_name=nsf-viewer" >> agent.config
 
-ENV JAVA_OPTS="-javaagent:/opt/nsf/nsf-agent-fat.jar=nsf -Dstock_provider_url=http://nsf-provider -Dstock_advisor_url=http://nsf-advisor"
+ENV JAVA_OPTS=-javaagent:/opt/nsf/nsf-agent-fat.jar=nsf -Dstock_provider_url=http://nsf-provider -Dstock_advisor_url=http://nsf-advisor
 #add run command
 ADD ./nsf-demo-stock-viewer/run.sh  /opt/nsf/
 RUN chmod a+x /opt/nsf/run.sh
