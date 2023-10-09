@@ -9,12 +9,6 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 #add application jar
 ADD ./nsf-demo-stock-viewer/target/*.jar /opt/nsf/
 
-#add nsf agent jar and config file
-RUN mkdir -p /opt/nsf && cd /opt/nsf && \
-    curl -O http://console.jfyl.upgrade.test.com/download/nsf/nsf-agent-fat.jar
-ADD ./nsf-demo-stock-viewer/nsf.yml /opt/nsf/nsf.yml
-
-
 
 #add apm agent jar and config file
 #RUN mkdir -p /opt/apm && cd /opt/apm && \
@@ -25,6 +19,6 @@ ADD ./nsf-demo-stock-viewer/nsf.yml /opt/nsf/nsf.yml
 #    echo "agent.authentication=MTgtc29sdXRpb24=" >> agent.config && \
 #    echo "agent.service_name=nsf-viewer" >> agent.config
 
-ENV JAVA_OPTS='-javaagent:/opt/nsf/nsf-agent-fat.jar=nsf -Dstock_provider_url=http://nsf-provider -Dstock_advisor_url=http://nsf-advisor'
+ENV JAVA_OPTS='-Dstock_provider_url=http://nsf-provider -Dstock_advisor_url=http://nsf-advisor'
 
 CMD java $JAVA_OPTS -jar /opt/nsf/nsf-demo-stock-viewer-1.0-SNAPSHOT.jar
