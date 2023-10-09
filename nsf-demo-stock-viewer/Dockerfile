@@ -32,4 +32,4 @@ RUN chmod a+x /opt/nsf/run.sh
 
 # CMD ["/opt/nsf/run.sh"]
 
-CMD ["java",$JAVA_OPTS,"-jar","/opt/nsf/nsf-demo-stock-viewer-1.0-SNAPSHOT.jar"]
+CMD ["java",'$JAVA_OPTS',"-jar","/opt/nsf/nsf-demo-stock-viewer-1.0-SNAPSHOT.jar"]
