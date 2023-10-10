@@ -5,7 +5,7 @@ nsf:
     name: nsf-viewer-shoudong
     version: 0.0.1
     projectCode: project1
-    envCode: prod
+    projectEnv: prod
     mark: ""
     tags: []
   manager:
