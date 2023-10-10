@@ -2,7 +2,7 @@ nsf:
   type: http
   nsfServer: 'http://nsf-server.jfyl.upgrade.test.com'
   application:
-    name: nsf-provider
+    name: nsf-provider-shoudong
     version: v0.0.1
     projectCode: project1
     envCode: prod

@@ -9,6 +9,6 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 #add application jar
 ADD ./nsf-demo-stock-viewer/target/*.jar /opt/nsf/
 
-ENV JAVA_OPTS='-Dstock_provider_url=http://nsf-provider -Dstock_advisor_url=http://nsf-advisor'
+ENV JAVA_OPTS=''
 
 CMD java $JAVA_OPTS -jar /opt/nsf/nsf-demo-stock-viewer-1.0-SNAPSHOT.jar
