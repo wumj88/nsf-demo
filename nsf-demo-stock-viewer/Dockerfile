@@ -17,7 +17,7 @@ RUN mkdir -p /opt/apm && cd /opt/apm && \
    cd ./skywalking-napm-bin-8.10.0-latest/agent/config && \
    echo "collector.backend_service=apm-otel-collector.jfyl.upgrade.test.com:11800" >> agent.config && \
    echo "agent.authentication=My1kZW1v" >> agent.config && \
-   echo "agent.service_name=nsf-viewer" >> agent.config && \
+   echo "agent.service_name=nsf-viewer-apm" >> agent.config && \
    echo "agent.sample_n_per_3_secs=10000" >> agent.config
    
 
