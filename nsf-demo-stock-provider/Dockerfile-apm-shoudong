@@ -13,10 +13,11 @@ RUN mkdir -p /opt/apm && cd /opt/apm && \
    curl -o skywalking-napm-bin-8.10.0-latest.tar.gz http://console.jfyl.upgrade.test.com/download/napm/skywalking-napm-bin-8.10.0-latest.tar.gz && \
    tar zxvf skywalking-napm-bin-8.10.0-latest.tar.gz && \
    cd ./skywalking-napm-bin-8.10.0-latest/agent/config && \
-   echo "collector.backend_service=apm-otel-collector.jfyl.upgrade.test.com:11800" >> agent.config && \
-   echo "agent.authentication=My1kZW1v" >> agent.config && \
-   echo "agent.service_name=nsf-provider-apm" >> agent.config && \
+   echo "agent.authentication=${SW_AGENT_AUTHENTICATION:My1kZW1v}" >> agent.config && \
+   echo "agent.service_name=${SW_AGENT_AUTHENTICATION:nsf-provider-apm}" >> agent.config && \
+   echo "collector.backend_service=${SW_AGENT_COLLECTOR_BACKEND_SERVICES:apm-otel-collector.jfyl.upgrade.test.com:11800}" >> agent.config && \
    echo "agent.sample_n_per_3_secs=10000" >> agent.config
+   
 
 ENV JAVA_OPTS=''
 
