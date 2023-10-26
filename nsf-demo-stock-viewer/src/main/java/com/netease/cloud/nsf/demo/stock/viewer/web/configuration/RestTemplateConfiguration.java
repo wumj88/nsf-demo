@@ -23,18 +23,18 @@ public class RestTemplateConfiguration {
 		return new RestTemplate();
 	}
 
-	@Autowired
-	TraceHttpInterceptor traceHttpInterceptor;
+	// @Autowired
+	// TraceHttpInterceptor traceHttpInterceptor;
 
-	@Autowired
-	RestTemplate restTemplate;
+	// @Autowired
+	// RestTemplate restTemplate;
 
-	@PostConstruct
-	public void restTemplateInterceptors() {
-		List<ClientHttpRequestInterceptor> interceptors = restTemplate.getInterceptors();
-		if(!interceptors.contains(traceHttpInterceptor)) {
-			interceptors.add(traceHttpInterceptor);
-			restTemplate.setInterceptors(interceptors);
-		}
-	}
+	// @PostConstruct
+	// public void restTemplateInterceptors() {
+	// 	List<ClientHttpRequestInterceptor> interceptors = restTemplate.getInterceptors();
+	// 	if(!interceptors.contains(traceHttpInterceptor)) {
+	// 		interceptors.add(traceHttpInterceptor);
+	// 		restTemplate.setInterceptors(interceptors);
+	// 	}
+	// }
 }
