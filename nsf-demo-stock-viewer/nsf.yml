@@ -3,7 +3,7 @@ nsf:
   nsfServer: 'http://nsf-server.jfyl.upgrade.test.com'
   application:
     name: nsf-viewer-shoudong
-    version: 0.0.1
+    version: 0.1
     projectCode: project1
     projectEnv: prod
     mark: ""
