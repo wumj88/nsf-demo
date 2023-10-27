@@ -2,12 +2,11 @@ nsf:
   type: http
   nsfServer: 'http://nsf-server.jfyl.upgrade.test.com'
   application:
-    name: stock-provider
-    version: v0.0.3
+    name: stock-provider-shoudong
+    version: v0.1
     projectCode: project1
-    envCode: prod
+    projectEnv: prod
     mark: "wumj"
-    group: default
     tags: []
   manager:
     patterns: 
