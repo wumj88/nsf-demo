@@ -3,10 +3,10 @@ nsf:
   nsfServer: 'http://nsf-server.jfyl.upgrade.test.com'
   application:
     name: stock-provider-shoudong
-    version: v0.1
+    version: v0.2
     projectCode: project1
     projectEnv: prod
-    mark: "wumj"
+    mark: 
     tags: []
   manager:
     patterns: 
